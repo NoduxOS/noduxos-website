@@ -1,191 +1,36 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-GT">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NoduxOS - Soluciones tecnológicas para empresas">
-  <title>NoduxOS | Tecnología para tu empresa</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f9fc;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
-      color: #111827;
-    }
-
-    nav a {
-      color: #4b5563;
-      text-decoration: none;
-      margin-left: 24px;
-    }
-
-    nav a:hover {
-      color: #111827;
-    }
-
-    .hero {
-      min-height: 65vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 70px 20px;
-      background: linear-gradient(135deg, #f8fafc, #eef4ff);
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #111827;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #4b5563;
-      margin-bottom: 32px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 25px;
-      background: #111827;
-      color: white;
-      text-decoration: none;
-      border-radius: 7px;
-    }
-
-    .content {
-      max-width: 1000px;
-      margin: auto;
-      padding: 65px 25px;
-      text-align: center;
-    }
-
-    .content h2 {
-      font-size: 32px;
-      margin-bottom: 18px;
-    }
-
-    .content p {
-      color: #4b5563;
-      max-width: 750px;
-      margin: auto;
-    }
-
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    footer .links {
-      margin-bottom: 15px;
-    }
-
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-    }
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NoduxOS | Tu negocio. Tus módulos. Tu sistema.</title>
+<meta name="description" content="Conecta ventas, inventarios, rentas, cuentas por cobrar, cobros, bancos y transportes con NoduxOS. Descubre los módulos para gestionar tu empresa en Guatemala.">
+<meta name="theme-color" content="#062b42"><link rel="canonical" href="https://noduxos.com/">
+<meta property="og:type" content="website"><meta property="og:locale" content="es_GT"><meta property="og:title" content="NoduxOS — Tu negocio. Tus módulos. Tu sistema."><meta property="og:description" content="Una operación conectada. Explora los módulos de ventas, inventarios, rentas, cobros, bancos y transportes."><meta property="og:url" content="https://noduxos.com/">
+<link rel="stylesheet" href="assets/site.css">
+<script type="module" src="assets/site.js"></script>
 </head>
-
 <body>
-
-<header>
-  <div class="logo">NoduxOS</div>
-
-  <nav>
-    <a href="/">Inicio</a>
-    <a href="politica-de-privacidad.html">Privacidad</a>
-    <a href="eliminacion-de-datos.html">Eliminación de datos</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>Tecnología que conecta tu empresa</h1>
-
-    <p>
-      NoduxOS desarrolla soluciones tecnológicas para simplificar procesos,
-      conectar herramientas y ayudar a las empresas a trabajar de forma
-      más eficiente.
-    </p>
-
-    <a class="button" href="mailto:soporte@noduxos.com">
-      Contactar
-    </a>
-  </div>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="header"><a class="brand" href="#" aria-label="NoduxOS, inicio"><img class="brand-logo" width="76" height="76" alt="NoduxOS" src="data:image/jpeg;base64,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"></a><nav aria-label="Navegación principal"><a href="#modulos">Módulos</a><a href="#conectados">Cómo funciona</a><a href="#preguntas">Preguntas</a></nav><a class="login" href="https://app.noduxos.com">Ingresar al sistema <span aria-hidden="true">↗</span></a></header>
+<main id="contenido">
+<section class="hero wrap">
+<div class="hero-copy"><p class="eyebrow"><span class="dot"></span> GESTIÓN EMPRESARIAL MODULAR</p><h1>Tu negocio.<br>Tus módulos.<br><em>Tu sistema.</em></h1><p class="intro">Conecta lo que vendes, lo que tienes y lo que cobras. NoduxOS reúne tu operación en un mismo lugar, con los módulos que tu empresa necesita.</p><div class="actions"><a class="button primary" href="#modulos">Explorar los módulos <span aria-hidden="true">↗</span></a><a class="text-link" href="#contacto">Conversemos sobre tu empresa <span aria-hidden="true">→</span></a></div><p class="hero-note">Ventas · Inventarios · Rentas · Cobros · Y más</p></div>
+<div class="product-scene" aria-label="Vista ilustrativa de módulos conectados en NoduxOS">
+<div class="scene-top"><span class="scene-brand">nodux<span>OS</span></span><span class="scene-label">Una operación conectada</span></div>
+<div class="scene-body"><aside class="scene-sidebar" aria-hidden="true"><span class="mini-active">▦</span><span>▤</span><span>▥</span><span>◷</span><span>⇄</span><span>⚙</span></aside><div class="scene-main"><div class="scene-heading"><div><span class="micro">TU ESPACIO DE TRABAJO</span><h2>Todo empieza aquí.</h2></div><span class="avatar">N</span></div><div class="scene-grid"><a href="#modulos" data-select="ventas"><span class="tile-icon blue">↗</span><b>Ventas</b><small>De cotización a pedido</small></a><a href="#modulos" data-select="inventarios"><span class="tile-icon mint">▦</span><b>Inventarios</b><small>Cada producto, en su lugar</small></a><a href="#modulos" data-select="rentas"><span class="tile-icon violet">◷</span><b>Rentas</b><small>Equipos en movimiento</small></a><a href="#modulos" data-select="cxc"><span class="tile-icon amber">≡</span><b>Clientes y CxC</b><small>Claridad en cada saldo</small></a></div><div class="scene-flow"><span class="flow-check">✓</span><div><b>Tu equipo, conectado</b><small>Usuarios y permisos por empresa</small></div><span aria-hidden="true">↗</span></div></div></div><div class="scene-footer"><span class="dot"></span> Módulos que trabajan juntos <span>Vista ilustrativa</span></div>
+<div class="floating-label"><span>7</span><div>Módulos disponibles<br><b>Un mismo sistema</b></div></div>
+</div>
 </section>
-
-<section class="content">
-  <h2>Soluciones empresariales conectadas</h2>
-
-  <p>
-    NoduxOS integra herramientas de comunicación, automatización y gestión
-    empresarial en soluciones diseñadas para facilitar las operaciones
-    diarias de pequeñas y medianas empresas.
-  </p>
-</section>
-
-<footer>
-
-  <div class="links">
-    <a href="politica-de-privacidad.html">Política de Privacidad</a>
-    <a href="eliminacion-de-datos.html">Eliminación de Datos</a>
-    <a href="condiciones-del-servicio.html">Condiciones del Servicio</a>
-  </div>
-
-  <p>© 2026 NoduxOS. Todos los derechos reservados.</p>
-  <p>soporte@noduxos.com</p>
-
-</footer>
-
-</body>
-</html>
+<section class="value-strip"><div class="wrap strip-inner"><p>Una base común.<br><strong>Más control en cada área.</strong></p><span>Información por empresa</span><span>Accesos según el rol</span><span>Documentos con tu identidad</span></div></section>
+<section id="modulos" class="section wrap"><div class="section-heading"><div><p class="eyebrow">ELIGE POR DÓNDE EMPEZAR</p><h2>Un módulo para cada<br>parte de tu operación.</h2></div><p>Conoce las herramientas disponibles y cómo ayudan a tu equipo. La habilitación se configura según los servicios de tu empresa.</p></div>
+<div class="module-explorer"><div class="module-tabs" role="tablist" aria-label="Módulos disponibles" aria-orientation="vertical"></div><article class="module-detail" id="module-panel" role="tabpanel" tabindex="0"></article></div>
+<noscript><div class="noscript-modules"><h3>Módulos disponibles</h3><p>Ventas permite crear cotizaciones y pedidos. Inventarios reúne productos, bodegas y compras. Rentas organiza equipos y revisiones. Clientes y CxC administra facturas, abonos y saldos. Asistente de Cobros facilita el seguimiento. Bancos y Caja controla cuentas y sesiones de caja. Transportes permite crear guías y rastrear paquetes con FORZA.</p></div></noscript>
+<p class="catalog-note"><span class="outline-tag">PRÓXIMAMENTE</span> <strong>Garantías</strong> · Un módulo en desarrollo para el seguimiento de equipos y sus casos de atención.</p></section>
+<section id="conectados" class="connected section"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">DEL PRIMER CONTACTO AL SEGUIMIENTO</p><h2>Menos piezas sueltas.<br>Más continuidad.</h2></div><p>Cada área tiene su espacio. Los módulos comparten la base de usuarios, empresas y permisos para acompañar el trabajo diario.</p></div><div class="journey"><article><span class="step">01</span><h3>Prepara tu operación</h3><p>Organiza clientes, productos, bodegas, precios y cuentas financieras.</p><span class="journey-label">INVENTARIOS + CLIENTES + BANCOS</span></article><article><span class="step">02</span><h3>Convierte oportunidades</h3><p>Crea una cotización, registra su aceptación y conviértela en pedido con reserva de inventario.</p><span class="journey-label">VENTAS + INVENTARIOS</span></article><article><span class="step">03</span><h3>Da seguimiento</h3><p>Consulta saldos, registra abonos y organiza el seguimiento de cobros y envíos desde sus módulos.</p><span class="journey-label">CxC + COBROS + TRANSPORTES</span></article></div></div></section>
+<section class="section wrap foundation"><div><p class="eyebrow">HECHO PARA TU FORMA DE TRABAJAR</p><h2>Tu empresa tiene<br>su propia identidad.</h2><p class="intro">NoduxOS reúne la configuración que tu equipo necesita para operar con orden y presentar documentos profesionales.</p><a class="text-link" href="#contacto">Conoce cómo implementarlo <span aria-hidden="true">→</span></a></div><div class="foundation-list"><article><span>01</span><div><h3>Empresas y equipos</h3><p>Configuración por empresa, invitación de usuarios y permisos para las acciones de cada rol.</p></div></article><article><span>02</span><div><h3>Documentos con tu marca</h3><p>Logo de tu empresa, formatos preestablecidos y documentos comerciales para imprimir o descargar en PDF. Consulta opciones de diseño especial.</p></div></article><article><span>03</span><div><h3>Historial para consultar</h3><p>Accede al detalle de documentos y movimientos para dar seguimiento a tu operación.</p></div></article></div></section>
+<section class="integrations wrap"><div><p class="eyebrow">CONEXIONES QUE AMPLÍAN TU OPERACIÓN</p><h2>Herramientas que se entienden.</h2></div><div class="integration-grid"><article><h3>FORZA <span>Logística</span></h3><p>Guías de envío estándar y contra entrega, etiquetas y rastreo de paquetes.</p><small>Requiere configurar la cuenta del transportista.</small></article><article><h3>FELCORE <span>Facturación FEL</span></h3><p>Consulta facturas FEL y descarga el documento personalizado o el original del certificador.</p><small>La emisión requiere configuración y validación fiscal por empresa.</small></article><article><h3>WhatsApp <span>Comunicación</span></h3><p>Seguimiento desde el Asistente de Cobros y opciones para compartir cotizaciones con tus clientes.</p><small>El envío automático requiere una conexión de Meta activa. Compartir una cotización no equivale a un envío automático.</small></article></div></section>
+<section id="preguntas" class="section wrap faq"><div><p class="eyebrow">RESOLVEMOS TUS DUDAS</p><h2>Antes de empezar.</h2></div><div><details><summary>¿Necesito contratar todos los módulos?</summary><p>La plataforma es modular. Los servicios se habilitan por empresa. Conversemos sobre tu operación para definir los módulos y condiciones que necesitas.</p></details><details><summary>¿Puedo usar Clientes y CxC sin el Asistente de Cobros?</summary><p>Sí. Clientes y CxC funciona de forma independiente para consultar clientes, facturas, abonos y estados de cuenta. El Asistente agrega herramientas de seguimiento.</p></details><details><summary>¿Puedo descargar mis documentos en PDF?</summary><p>Sí. Ventas permite descargar cotizaciones y documentos comerciales. Para facturas FEL puedes consultar el formato personalizado y el original disponible del certificador.</p></details><details><summary>¿Qué necesito para usar WhatsApp o facturación FEL?</summary><p>Estas integraciones requieren configuración por empresa. WhatsApp necesita el registro y la conexión correspondiente en Meta. La emisión FEL requiere credenciales del certificador, datos fiscales y validación antes de comenzar a emitir.</p></details><details><summary>¿Cómo conozco el precio y solicito una demostración?</summary><p>Escríbenos a <a href="mailto:soporte@noduxos.com">soporte@noduxos.com</a> e indícanos el giro de tu empresa y los módulos que te interesan. Te ayudaremos a revisar el alcance y las condiciones de implementación.</p></details></div></section>
+<section id="contacto" class="contact wrap"><div><p class="eyebrow">EL SIGUIENTE PASO ES TUYO</p><h2>Conectemos<br>tu negocio.</h2><p>Cuéntanos cómo trabajas y qué quieres organizar.<br>Exploremos juntos los módulos para tu empresa.</p><a class="button light" href="mailto:soporte@noduxos.com?subject=Quiero%20conocer%20NoduxOS">Solicitar una demostración <span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:soporte@noduxos.com">soporte@noduxos.com</a></div><div class="contact-mark" aria-hidden="true"><span>N</span><i></i><i></i><i></i></div></section>
+</main>
+<footer class="wrap"><div class="footer-top"><a class="footer-brand" href="#">nodux<span>OS</span></a><p>Tu negocio. Tus módulos. Tu sistema.</p><a href="https://app.noduxos.com">Ingresar al sistema ↗</a></div><div class="footer-bottom"><p>© 2026 NoduxOS</p><nav aria-label="Información legal"><a href="politica-de-privacidad.html">Privacidad</a><a href="condiciones-del-servicio.html">Condiciones del servicio</a><a href="eliminacion-de-datos.html">Eliminación de datos</a></nav></div></footer>
+</body></html>
